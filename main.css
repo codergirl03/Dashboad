@@ -233,7 +233,7 @@ body{
     left: 0;
     z-index: 1;
     font-family: 'Ubuntu', sans-serif;
-    height: 579px;
+    height: 100vh;
     width: 23%;
     background-color: #1C222D;
     scroll-behavior:smooth;
@@ -318,7 +318,7 @@ body{
     scroll-behavior: smooth;
     width: 77%;
     overflow-y: auto ;
-    max-height: 579px;
+    max-height: 100vh;
     background-color: #F6F6F6;
 }
 
