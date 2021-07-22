@@ -5,10 +5,11 @@
 }
 body{
     height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .topNav{
+    font-family: 'Ubuntu', sans-serif;
     display: flex;
     align-items: center;
     width: 100%;
@@ -162,6 +163,7 @@ body{
     border-radius: 7px;
     align-items: center;
     justify-content: space-around;
+    cursor:pointer;
 }
 .selector #selectorField .change_select{
     display: flex;
@@ -257,6 +259,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 12px 45px 12px 35px;
+    cursor:pointer;
 }
 .dropdown_page .drop_view:hover{
     background-color: #64646496;
@@ -374,9 +377,11 @@ body{
     color: white;
     font-size: 30px;
 }
-.cards .info .icon .fa-dollar-sign{
-    padding-left: 20px;
-    padding-right: 20px;
+.cards .info .icon span{
+    font-size: 36px;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 20px 10px 20px;
     background-color: #A5C560;
 }
 .cards .info .icon .fa-user{
@@ -384,6 +389,9 @@ body{
 }
 .cards .info .icon .fa-envelope{
     background-color: #F3BB4D;
+}
+.cards .words{
+    pointer-events: none;
 }
 .cards .words h2{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -420,7 +428,8 @@ body{
 }
 .line_chart1 .statis h3{
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 200;
+    font-size: 17px;
 }
 .line_chart1 .statis i{
     font-size: 20px;
@@ -431,8 +440,8 @@ body{
     padding: 30px 0 30px;
 }
 #chartStatistics{
-     background: white;
-    padding: 0px 15px 0 15px;
+    background: white;
+    padding: 5px 15px 5px 15px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
 }
@@ -577,7 +586,10 @@ body{
     justify-content: space-between;
 }
 .todo_li .task i{
-    margin-right: 5px;
+    margin-left: -3px;
+}
+.todo_li .task span{
+    margin-left: 5px;
 }
 .todo_progress .inform{
     display: flex;
@@ -590,6 +602,7 @@ body{
     padding: 12px 15px 12px 15px;
     background-color: white;
     border-radius: 7px;
+    font-family: 'Ubuntu', sans-serif;
 }
 .inform .progress .red{
     color: #FB5141;
@@ -695,10 +708,10 @@ body{
 }
 .months i {
     font-size: 25px;
-    color: #7392C1;
+    color: #7196C1;
 }
 .months h4{
-    color: #7392C1;
+    color: #7196C1;
     font-family: 'Ubuntu', sans-serif;
 }
 .cal_wrap table{
@@ -708,9 +721,13 @@ body{
 }
 .cal_wrap table tbody tr th ,.cal_wrap table tbody tr td{
     font-size: 13px;
-    color: #7c95be;
+    color: #7196C1;
+    cursor: pointer;
     font-weight: bold;
     padding: 15px 15px 0 15px ;
+}
+.cal_wrap table tbody tr td:hover{
+    color: black;
 }
 .cal_wrap .clock{
     padding: 20px 25px 5px 25px;
@@ -720,15 +737,17 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .cal_wrap .meet p{
-    color: #7c95be;
+    color: #7196C1;
 }
 .cal_wrap .meet span{
-    background-color: #7c95be;
-    padding: 3px;
+    background-color: #7196C1;
+    padding: 3px 7px;
     color: white;
-    border-radius: 7px;
+    font-size: 12px;
+    border-radius: 10px;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -781,9 +800,6 @@ body{
     align-items: center;
     padding: 8px 5px 8px 5px;
     margin-left: 0;
-}
-.notific_ul .notific_li .icon{
-    margin-right: 35px;
 }
 .notific_ul .notific_li .icon i {
     padding: 14px;
@@ -841,25 +857,26 @@ body{
     display: flex;
     align-items: center;
     border-radius: 200px;
+    margin-right: 25px;
  }
 .notific_ul .notific_li .blue{
-    border-left: 5px solid #F6F6F6 ;
-    border-right: 5px solid #CAE7F5 ;
-    border-top: 5px solid #CAE7F5;
-    border-bottom: 5px solid  #f6f6f6;
+    border-left: 3px solid #CAE7F5 ;
+    border-right: 3px solid #CAE7F5 ;
+    border-top: 3px solid #CAE7F5;
+    border-bottom: 3px solid  #CAE7F5 ;
 }
 .notific_ul .notific_li .green{
-    border-left: 5px solid #F6F6F6 ;
-    border-right: 5px solid #DFEAD0 ;
-    border-top: 5px solid #DFEAD0 ;
-    border-bottom: 5px solid #f6f6f6 ;
+    border-left: 3px solid #DFEAD0 ;
+    border-right: 3px solid #DFEAD0 ;
+    border-top: 3px solid #DFEAD0 ;
+    border-bottom: 3px solid #DFEAD0 ;
 }
 
 .notific_ul .notific_li .orange{
-    border-left: 5px solid #F6F6F6 ;
-    border-right: 5px solid #FFEECE ;
-    border-top: 5px solid #FFEECE ;
-    border-bottom: 5px solid #f6f6f6 ;
+    border-left: 3px solid #FFEECE ;
+    border-right: 3px solid #FFEECE ;
+    border-top: 3px solid #FFEECE ;
+    border-bottom: 3px solid #FFEECE ;
 }
 
 
@@ -886,9 +903,8 @@ body{
 .graph .graph_head h3{
     font-weight: 100;
 }
-.graph .graph_head i {
-    color: #B0ABAB;
-    font-size: 20px;
+.graph .graph_head .gear {
+    width: 6%;
 }
 .graph img{
     width: 100%;
