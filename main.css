@@ -501,7 +501,7 @@ body{
 .progress-row .progress .progress_wrap .progress_bar1{
     background-color: #FFC14B;
     border-radius: 12px;
-    width: 56%;
+    width: 64%;
     height: 8px;
     border: none;
     overflow: hidden;
@@ -509,7 +509,7 @@ body{
 .progress-row .progress .progress_wrap .progress_bar2{
     background-color: #6FC247;
     border-radius: 12px;
-    width: 56%;
+    width: 46%;
     height: 8px;
     border: none;
     overflow: hidden;
@@ -517,7 +517,7 @@ body{
 .progress-row .progress .progress_wrap .progress_bar3{
     background-color: #05CCA7;
     border-radius: 12px;
-    width: 56%;
+    width: 76%;
     height: 8px;
     border: none;
     overflow: hidden;
@@ -663,10 +663,18 @@ body{
 }
 .cal_weather .weather_wrap .sun_degree{
     display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.cal_weather .weather_wrap .sun_degree span img{
+    width: 100%;
+}
+.cal_weather .weather_wrap div h6{
+    font-size: 17px;
+    margin-left: -10px;
 }
 .cal_weather .weather_wrap h1{
-    font-size: 50px;
-    margin-left: 20px;
+    font-size: 60px;
     position: relative;
     font-weight: 100;
 }
@@ -923,7 +931,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 50px 25px 15px;
+    padding: 12px 50px 16px 15px;
 
 }
 .graph .bar_graph img{
