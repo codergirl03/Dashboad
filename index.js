@@ -235,11 +235,17 @@ let todoInput = document.querySelector("#todoInput")
 let btnAddTodo = document.querySelector("#btnAddTodo")
 let plusTodo = document.querySelector("#plusTodo")
 let todoUl = document.querySelector(".todo_ul")
+let times = document.querySelector("#times")
 
 plusTodo.addEventListener("click" , () => {
     console.log("s");
-    todoAdd.style.display = "block"
+    todoAdd.style.display = "flex"
     plusTodo.style.display = "none"
+})
+
+times.addEventListener("click" , () => {
+    todoAdd.style.display = "none"
+    plusTodo.style.display = "block"
 })
 
 function renderTodo(data){
