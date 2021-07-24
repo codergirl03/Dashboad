@@ -934,10 +934,10 @@ body{
 }
 .graph .graph_head .gear {
     cursor: pointer;
-    width: 6%;
+    /* width: 6%; */
 }
 .graph img{
-    width: 100%;
+    /* width: 100%; */
 }
 .graph .g_words{
     font-size: 15px;
@@ -974,7 +974,7 @@ body{
     padding: 35px 20px 0px 0;
 }
 .bar_graph .progress_vertical{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     left: 225px;
     transform: rotate(180deg);
