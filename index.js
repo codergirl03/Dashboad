@@ -47,16 +47,9 @@ barIcon.addEventListener("click" , () => {
     sideBar.classList.toggle("hidebar")
 })
 
-
 // charts
 
 let lineChart1 = document.querySelector("#chartStatistics").getContext("2d")
-
-// global defaults
-
-    // Chart.defaults.global.defaultFontSize = 18 ;
-    // Chart.defaults.global.defaultFontColor = "#B0ABAB";
-    // Chart.defaults.global.defaultFontFamily = "Gill Sans";
 
 let lineStatis = new Chart(lineChart1 , {
     type: "line",
@@ -122,7 +115,6 @@ let lineStatis = new Chart(lineChart1 , {
         }
     }
 })
-
 
 let lineChart2 = document.querySelector("#chartYearly").getContext("2d")
 
@@ -224,16 +216,6 @@ let linelastGraph = new Chart( lastGraph, {
             }
             }  
         },
-
-        // labels:{
-        //     pointLabelFontColor : "#FFFFFF",
-        //     pointLabelFontSize : 30,
-        // },
-        //  scale: {
-        //     scaleLabel:{
-        //         fontColor: 'red'
-        //     }
-        // },
         plugins:{
             decimation:{
                 enabled: false,
@@ -246,38 +228,72 @@ let linelastGraph = new Chart( lastGraph, {
     }
 })
 
-// let linelastGraph = new Chart( lastGraph, {
-//     type:"line",
-//     data : {
-//         labels: ['2014', '', '', '', '', '2015', ''],
-//         datasets: [
-//               {
-//                 label: '# first',
-//                 fill: false,
-//                 borderCapStyle:"butt",
-//                 borderDash:[],
-//                 borderDashOffset:0.0,
-//                 borderJoinStyle:"miter",
-//                 borderColor: '#fff',
-//                 pointBorderColor:"#5363BB",
-//                 pointBackgroundColor:"#fff",
-//                 pointBorderWidth:1,
-//                 pointHoverRadius:5,
-//                 pointHoverBackgroundColor:"rgba(75,192,192,1)",
-//                 pointHoverBorderColor:"#fff",
-//                 pointHoverBorderWidth:2,
-//                 pointRadius:1,
-//                 pointHitRadius:10,
-//                 data:[0, 25, 10 ,34, 27, 8 ,30]
-//               },
-            
-//           ],
-//       },
-//     options:{
-//         plugins:{
-//             legend:{
-//                 display: false,
-//             }
-//         }
-//     }
-// })
+
+
+let todoAdd = document.querySelector("#todoAdd")
+let todoInput = document.querySelector("#todoInput")
+let btnAddTodo = document.querySelector("#btnAddTodo")
+let plusTodo = document.querySelector("#plusTodo")
+let todoUl = document.querySelector(".todo_ul")
+
+plusTodo.addEventListener("click" , () => {
+    console.log("s");
+    todoAdd.style.display = "block"
+    plusTodo.style.display = "none"
+})
+
+function renderTodo(data){
+  todoUl.innerHTML = null
+  for(let i in data){
+    let li =  document.createElement("li")
+    let div = document.createElement("div")
+    let i1 = document.createElement("i")
+    let i2 = document.createElement("i")
+    let span = document.createElement("span")
+    let div2 =  document.createElement("div2")
+    let i3 = document.createElement("i")
+    let i4 = document.createElement("i")
+   
+    li.setAttribute("class" , "todo_li")
+    div.setAttribute("class" , "task")
+    i1.setAttribute("class" , "fas fa-ellipsis-v")
+    i2.setAttribute("class" , "fas fa-ellipsis-v")
+    div2.setAttribute("class" , "icons")
+    i3.setAttribute("class" , "fas fa-check")
+    i4.setAttribute("class" , "fas fa-times")
+
+    span.textContent = data[i]
+
+    div2.appendChild(i3)
+    div2.appendChild(i4)
+    div.appendChild(i1)
+    div.appendChild(i2)
+    div.appendChild(span)
+    li.appendChild(div)
+    li.appendChild(div2)
+    todoUl.appendChild(li)
+
+    i4.addEventListener("click", () => {
+       li.remove()
+    })
+
+    i3.addEventListener("click", () => {
+        span.style.textDecoration = "line-through"
+        li.style.opacity = "0.5"
+    })
+
+  
+  }
+
+}
+
+renderTodo(database)
+
+btnAddTodo.addEventListener("click" , () => {
+    if(todoInput.value !== ""){
+        database.push(todoInput.value)
+        renderTodo(database)
+    }
+    todoInput.value = ""
+})
+

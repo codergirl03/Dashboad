@@ -6,7 +6,6 @@
 body{
     height: 100vh;
     font-family: 'Ubuntu', sans-serif;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 .topNav{
     font-family: 'Ubuntu', sans-serif;
@@ -269,7 +268,15 @@ body{
     align-items: center;
     justify-content: start;
 }
-
+.drop_view .btn9{
+    background-color: #E36D13;
+    color: white;
+    padding:2px 7px 2px 7px ;
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-left: 60px;
+}
 .drop_view .wrap i{
     font-size: 20px;
     color: #A1ABB6;
@@ -575,6 +582,27 @@ body{
     font-size: 20px;
     cursor: pointer;
 }
+.todo .todo_head #todoAdd{
+    display: none;
+}
+.todo .todo_head #todoAdd #todoInput{
+    border: none;
+    padding: 6px;
+    border-radius: 7px;
+    width: 70%;
+}
+#plusTodo{
+    background-color: transparent;
+    border: none;
+}
+#btnAddTodo{
+    border: 1px solid white;
+    padding: 6px;
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+    background-color: transparent;
+}
 .todo .todo_ul{
     padding: 12px 15px 12px 15px;
     margin-bottom: 0;
@@ -600,7 +628,7 @@ body{
     cursor: pointer;
 }
 .todo_li .task i{
-    margin-left: -3px;
+    margin-left: 0px;
     cursor: pointer;
 }
 .todo_li .task span{
@@ -620,10 +648,10 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 .inform .progress .red{
-    color: #FB5141;
+    color: #FF503F;
 }
 .inform .progress .yellow{
-    color: #E7BF4F;
+    color: #FDCE56;
 }
 .inform .progress p {
     color: #B0ABAB;
@@ -644,7 +672,7 @@ body{
     margin-top: 15px;
 }
 .progress .progress_wrap .progress_bar1{
-    background-color: #FB5141;
+    background-color: #FF503F;
     border-radius: 12px;
     width: 56%;
     height: 14px;
@@ -652,7 +680,7 @@ body{
     overflow: hidden;
 }
 .progress .progress_wrap .progress_bar2{
-    background-color: #E7BF4F;
+    background-color: #FDCE56;
     border-radius: 12px;
     width: 56%;
     height: 14px;
@@ -934,10 +962,6 @@ body{
 }
 .graph .graph_head .gear {
     cursor: pointer;
-    /* width: 6%; */
-}
-.graph img{
-    /* width: 100%; */
 }
 .graph .g_words{
     font-size: 15px;
@@ -1024,6 +1048,7 @@ body{
 @media screen and (max-width:1240px){
     .sidebar{
         display: none;
+        width: 27% !important;
     }
     .main{
         width: 100% !important;
@@ -1032,6 +1057,8 @@ body{
         display: block;
     }
 }
+
+
 
 @media screen and (max-width:991px){
     .main .charts .line_chart1{
@@ -1042,7 +1069,10 @@ body{
         margin-top: 30px;
     }
     .sidebar {
-        width: 30% !important;
+        width: 32% !important;
+    }
+    .drop_view .btn9 {
+        margin-left: 40px;
     }
     .cards .info {
         width: 47%;

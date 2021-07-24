@@ -47,7 +47,7 @@
         <div class="selector">
             <div id="selectorField">
                 <div class="change_select">
-                    <img src="./img/man.png" alt="man">
+                    <img src="./img/manP.jpg" alt="man">
                     <p>Hi, Robert</p>
                 </div>
                 <i class="fas fa-chevron-down"></i>
@@ -58,7 +58,7 @@
                     <p>Hi, Ben</p>
                 </li>
                 <li class="li_options">
-                    <img src="./img/man.png" alt="man">
+                    <img src="./img/manP.jpg" alt="man">
                     <p>Hi, Robin</p>
                 </li>
                 <li class="li_options">
@@ -123,7 +123,7 @@
                 <div class="dropdown_page">
                     <div class="drop_view">
                         <div class="wrap">
-                            <i class="fas fa-chart-line"></i>
+                            <img src="./img/icons/chart.png" alt="chart">
                             <p>Charts</p>
                         </div>
                         <i class="fas fa-chevron-right"></i>
@@ -140,7 +140,7 @@
                 <div class="dropdown_page">
                     <div class="drop_view">
                         <div class="wrap">
-                            <i class="fas fa-bars"></i>
+                            <img src="./img/icons/task1.png" alt="task">
                             <p>Tasks</p>
                         </div>
                         <i class="fas fa-chevron-right"></i>
@@ -160,6 +160,7 @@
                             <img src="./img/icons/comment.png" alt="comment">
                             <p>Comment</p>
                         </div>
+                        <button class="btn9">9</button>
                         <i class="fas fa-chevron-right"></i>
                     </div>
                     <ul class="dropdown_cont hide">
@@ -396,10 +397,16 @@
                     <div class="todo">
                     <div class="todo_head">
                         <h3>ToDo List</h3>
-                        <i class="fas fa-plus"></i>
+                        <button id =  "plusTodo">
+                            <i class="fas fa-plus"></i>
+                        </button> 
+                        <div id="todoAdd">
+                            <input type="text" id="todoInput">
+                            <button id="btnAddTodo">Add</button>
+                        </div>
                    </div>
                    <ul class="todo_ul">
-                       <li class= "todo_li">
+                       <!-- <li class= "todo_li">
                            <div class = "task">
                            <i class="fas fa-ellipsis-v"></i>
                            <i class="fas fa-ellipsis-v"></i>
@@ -442,7 +449,7 @@
                                <i class="fas fa-check"></i>
                                <i class="fas fa-times"></i>
                            </div>
-                       </li>
+                       </li> -->
                    </ul>
                     </div>
                     <div class="inform">
@@ -623,7 +630,7 @@
     
 
     <script src="./chart.js"></script>
-
+    <script src="./todoData.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.js" integrity="sha512-lUsN5TEogpe12qeV8NF4cxlJJatTZ12jnx9WXkFXOy7yFbuHwYRTjmctvwbRIuZPhv+lpvy7Cm9o8T9e+9pTrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./index.js"></script>
 </body>
