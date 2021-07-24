@@ -109,7 +109,9 @@ let lineStatis = new Chart(lineChart1 , {
             },
           ],
     },
+
     options:{
+
         plugins: {
             legend: {
                 display: false,
@@ -125,6 +127,9 @@ let lineStatis = new Chart(lineChart1 , {
 
 
 let lineChart2 = document.querySelector("#chartYearly").getContext("2d")
+let script = document.createElement('script');
+script.src = '/chart.js';
+document.body.appendChild(script);
 
 let lineYearly = new Chart( lineChart2, {
     type:"line",
@@ -139,9 +144,9 @@ let lineYearly = new Chart( lineChart2, {
                 borderDashOffset:0.0,
                 borderJoinStyle:"miter",
                 borderColor: '#fff',
-                pointBorderColor:"#fff",
-                pointBorderBackgroundColor:"#8DC153",
-                pointBorderWidth:5,
+                pointBorderColor:"#5363BB",
+                pointBackgroundColor:"#fff",
+                pointBorderWidth:1,
                 pointHoverRadius:5,
                 pointHoverBackgroundColor:"rgba(75,192,192,1)",
                 pointHoverBorderColor:"#fff",
@@ -154,25 +159,23 @@ let lineYearly = new Chart( lineChart2, {
           ],
       },
     options:{
-        scales: {
-            x: {
-              grid: {
-                display: false,
-        
-              }
-            },
-          },
+      
         labels:{
             pointLabelFontColor : "#FFFFFF",
             pointLabelFontSize : 30,
         },
         plugins:{
+            decimation:{
+                enabled:true,
+            },
             legend:{
                 display: false,
                 
             }
+
         }
     }
+
 })
 
 
@@ -195,10 +198,10 @@ let linelastGraph = new Chart( lastGraph, {
                 borderDashOffset:0.0,
                 borderJoinStyle:"miter",
                 borderColor: '#fff',
-                pointBorderColor:"#fff",
+                pointBorderColor:"#5363BB",
                 pointBackgroundColor:"#fff",
                
-                pointBorderWidth:7,
+                pointBorderWidth:1,
                 pointHoverRadius:5,
                 pointHoverBackgroundColor:"rgba(75,192,192,1)",
                 pointHoverBorderColor:"#fff",
@@ -206,34 +209,44 @@ let linelastGraph = new Chart( lastGraph, {
                 pointRadius:1,
                   pointLabelFontColor : "#FFFFFF",
                 pointHitRadius:10,
-                data:[0, 25, 10 ,34, 27, 8 ,30]
+                data:[0, 20,20 ,30, 40, 20 ,50]
               },
             
           ],
       },
+
    options:{
           scales: {
-            x: {
-            grid: {
-                display: false,
-            }
-            },
-            y: {
-            grid: {
-                display: false
-            }
-            }  
-        },
 
-        // labels:{
-        //     pointLabelFontColor : "#FFFFFF",
-        //     pointLabelFontSize : 30,
-        // },
-        //  scale: {
-        //     scaleLabel:{
-        //         fontColor: 'red'
-        //     }
-        // },
+       
+    x: {
+      grid: {
+        display: false,
+
+      }
+    },
+
+    y: {
+      grid: {
+        display: false
+
+      }
+    }
+     
+    
+  },
+
+        labels:{
+            pointLabelFontColor : "#FFFFFF",
+            pointLabelFontSize : 30,
+
+
+        },
+         scale: {
+            scaleLabel:{
+                fontColor: 'red'
+            }
+        },
         plugins:{
             decimation:{
                 enabled: false,
@@ -241,43 +254,12 @@ let linelastGraph = new Chart( lastGraph, {
             },
             legend:{
                 display: false,
+
+                 
             },
+ 
+
         }
     }
-})
 
-// let linelastGraph = new Chart( lastGraph, {
-//     type:"line",
-//     data : {
-//         labels: ['2014', '', '', '', '', '2015', ''],
-//         datasets: [
-//               {
-//                 label: '# first',
-//                 fill: false,
-//                 borderCapStyle:"butt",
-//                 borderDash:[],
-//                 borderDashOffset:0.0,
-//                 borderJoinStyle:"miter",
-//                 borderColor: '#fff',
-//                 pointBorderColor:"#5363BB",
-//                 pointBackgroundColor:"#fff",
-//                 pointBorderWidth:1,
-//                 pointHoverRadius:5,
-//                 pointHoverBackgroundColor:"rgba(75,192,192,1)",
-//                 pointHoverBorderColor:"#fff",
-//                 pointHoverBorderWidth:2,
-//                 pointRadius:1,
-//                 pointHitRadius:10,
-//                 data:[0, 25, 10 ,34, 27, 8 ,30]
-//               },
-            
-//           ],
-//       },
-//     options:{
-//         plugins:{
-//             legend:{
-//                 display: false,
-//             }
-//         }
-//     }
-// })
+})

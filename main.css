@@ -269,6 +269,7 @@ body{
     align-items: center;
     justify-content: start;
 }
+
 .drop_view .wrap i{
     font-size: 20px;
     color: #A1ABB6;
@@ -406,6 +407,7 @@ body{
 /* charts */
 
 .main .charts {
+    cursor: default;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -426,6 +428,9 @@ body{
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
+.main .charts .line_chart1 .statis img{
+    cursor: pointer;
+}
 .line_chart1 .statis h3{
     text-transform: uppercase;
     font-weight: 200;
@@ -433,11 +438,6 @@ body{
 }
 .line_chart1 .statis i{
     font-size: 20px;
-}
-#chartYearly{
-    margin-bottom: -30px;
-    margin-top: -30px;
-    padding: 30px 0 30px;
 }
 #chartStatistics{
     background: white;
@@ -449,6 +449,11 @@ body{
     width: 35%;
     border-radius: 7px;
     font-family: 'Ubuntu', sans-serif;
+}
+#chartYearly{
+    padding: 15px 0 15px;
+    margin-bottom: -15px;
+    margin-top: -15px;
 }
 
 .line_chart2 .chart_back{
@@ -469,21 +474,25 @@ body{
     border-radius: 7px;
 }
 .progress-row .progress{
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    margin-top: 10px;
 }
 .progress-row .progress .blue{
     color: #05CCA7;
+    margin-bottom: 2px;
 }
 .progress-row .progress .yellow{
     color: #FFC14B;
+    margin-bottom: 2px;
 }
 .progress-row .progress .green{
     color:#6FC247;
+    margin-bottom: 2px;
 }
 .progress-row .progress p {
     color: #B0ABAB;
     font-size: 12px;
-    margin-top: 2px;
+    margin-bottom: 10px;
 }
 .progress-row.progress h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -531,6 +540,7 @@ body{
 /* todo and weather */
 
 .main .todo_weather{
+    cursor: default;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -563,6 +573,7 @@ body{
 .todo .todo_head i {
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 .todo .todo_ul{
     padding: 12px 15px 12px 15px;
@@ -585,8 +596,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.todo_ul .todo_li .icons i{
+    cursor: pointer;
+}
 .todo_li .task i{
     margin-left: -3px;
+    cursor: pointer;
 }
 .todo_li .task span{
     margin-left: 5px;
@@ -710,9 +725,11 @@ body{
 }
 .months .fa-chevron-left{
     margin-left: -25px;
+    cursor: pointer;
 }
 .months .fa-chevron-right{
     margin-right: -25px;
+    cursor: pointer;
 }
 .months i {
     font-size: 25px;
@@ -762,6 +779,7 @@ body{
 
 
 .main .n_graph{
+    cursor: default;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -790,6 +808,9 @@ body{
 }
 .n_graph .not .not_head h3{
     font-weight: 100;
+}
+.n_graph .not .not_head img{
+    cursor: pointer;
 }
 .n_graph .not i {
     color: #B0ABAB;
@@ -865,7 +886,7 @@ body{
     display: flex;
     align-items: center;
     border-radius: 200px;
-    margin-right: 25px;
+    margin-right: 20px;
  }
 .notific_ul .notific_li .blue{
     border-left: 3px solid #CAE7F5 ;
@@ -912,6 +933,7 @@ body{
     font-weight: 100;
 }
 .graph .graph_head .gear {
+    cursor: pointer;
     width: 6%;
 }
 .graph img{
@@ -939,16 +961,60 @@ body{
 
 }
 .bar_graph .info_bar h3{
-    font-size: 22px;
+    font-size: 18px;
     color:#5F5F5F;
 }
 .bar_graph .info_bar p{
     color:#5F5F5F;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 5px;
 }
-
-
+.graph #graphLast{
+    background-color: #9972b5;
+    padding: 35px 20px 0px 0;
+}
+.bar_graph .progress_vertical{
+    position: absolute;
+    display: flex;
+    left: 225px;
+    transform: rotate(180deg);
+}
+.bar_graph .progress_vertical .p1{
+    width: 8px;
+    height: 18px;
+    background-color: #9972b5;
+    margin-left: 5px;
+}
+.bar_graph .progress_vertical .p2{
+    margin-left: 5px;
+    width: 8px;
+    height: 39px;
+    background-color: #9972b5;
+}
+.bar_graph .progress_vertical .p3{
+    margin-left: 5px;
+    width: 8px;
+    height: 12px;
+    background-color: #9972b5;
+}
+.bar_graph .progress_vertical .p4{
+    margin-left: 5px;
+    width: 8px;
+    height: 17px;
+    background-color: #9972b5;
+}
+.bar_graph .progress_vertical .p5{
+    margin-left: 5px;
+    width: 8px;
+    height: 27px;
+    background-color: #9972b5;
+}
+.bar_graph .progress_vertical .p6{
+    margin-left: 5px;
+    width: 8px;
+    height: 32px;
+    background-color: #9972b5;
+}
 .hidebar{
     display: block !important;
 }
