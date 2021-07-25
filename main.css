@@ -8,6 +8,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 .topNav{
+    padding: 5px;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
     align-items: center;
@@ -379,6 +380,7 @@ body{
     border-bottom: 5px solid #f6f6f6 ;
 }
 .cards .info .orange{
+    background-color: #F3BB4D;
     border-left: 5px solid #F6F6F6 ;
     border-right: 5px solid #FFEECE ;
     border-top: 5px solid #FFEECE ;
@@ -401,8 +403,9 @@ body{
 .cards .info .icon .fa-user{
     background-color: #FF4F3D;
 }
-.cards .info .icon .fa-envelope{
-    background-color: #F3BB4D;
+.cards .info .icon .com_white{
+    padding: 18px 14px;
+    width: 55px;
 }
 .cards .words{
     pointer-events: none;
@@ -625,7 +628,13 @@ body{
 #times i {
      font-size: 17px;
 }
+.todo_ul::-webkit-scrollbar{
+    scroll-behavior: smooth !important;
+}
+
 .todo .todo_ul{
+    height: 276px;
+    overflow-y: scroll;
     padding: 12px 15px 12px 15px;
     margin-bottom: 0;
 }
@@ -794,15 +803,21 @@ body{
     display: flex;
     justify-content: center;
 }
+.cal_wrap table tbody tr th {
+    font-weight: bolder;
+}
+.cal_wrap table tbody tr td{
+    font-weight: 500;
+}
 .cal_wrap table tbody tr th ,.cal_wrap table tbody tr td{
     font-size: 13px;
     color: #7196C1;
     cursor: pointer;
-    font-weight: bold;
-    padding: 15px 15px 0 15px ;
+    padding: 7.5px 15px 7.5px 15px ;
 }
 .cal_wrap table tbody tr td:hover{
     color: black;
+    background-color: aliceblue;
 }
 .cal_wrap .clock{
     padding: 20px 25px 5px 25px;
@@ -924,8 +939,9 @@ body{
     background-color: #ADD17B;
     color: #FFFFFF;
 }
-.notific_ul .notific_li:nth-child(2) i{
-    background-color: #FFC038;
+.notific_ul .notific_li:nth-child(2) img{
+    width: 100%;
+    padding: 11px 9px 11px 9px;
 }
 .notific_ul .notific_li:nth-child(3) i{
     background-color: #99C759;
@@ -952,6 +968,7 @@ body{
 }
 
 .notific_ul .notific_li .orange{
+    background-color: #FFC038;
     border-left: 3px solid #FFEECE ;
     border-right: 3px solid #FFEECE ;
     border-top: 3px solid #FFEECE ;
