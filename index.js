@@ -278,9 +278,11 @@ function renderTodo(data){
     li.appendChild(div2)
     todoUl.appendChild(li)
 
-    i4.addEventListener("click", () => {
-       li.remove()
-    })
+    i4.addEventListener('click', ()=>{
+        data.splice(i, 1);
+       
+    renderTodo(database)
+    });
 
     i3.addEventListener("click", () => {
         span.style.textDecoration = "line-through"
