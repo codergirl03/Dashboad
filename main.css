@@ -91,7 +91,7 @@ body{
 }
 .dropdown_notific .dropdown_content{
     position: absolute;
-    top: 35px;
+    top: 40px;
     display: none;
     background-color:  #8b8b8b;
     min-width: 160px;
@@ -135,7 +135,7 @@ body{
 }
 .dropdown_message .dropdown_content{
     position: absolute;
-    top: 35px;
+    top: 40px;
     display: none;
     background-color:  #8b8b8b;
     min-width: 160px;
@@ -194,8 +194,8 @@ body{
     overflow:hidden;
     position: absolute;
     z-index: 1;
-    top: 46px;
-    left: 15px;
+    top: 51px;
+    left: 20px;
 }
 #ul_list .li_options{
     display: flex;

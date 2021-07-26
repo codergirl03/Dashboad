@@ -7,7 +7,6 @@ selectId.onclick = () => {
     ul_list.classList.toggle("hide")
 }
 
-console.log();
 li_options.forEach( (option) => {
     option.onclick =  () => {
         change_select.innerHTML = option.innerHTML
